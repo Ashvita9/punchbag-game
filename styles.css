@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  height: 100vh;
+  /* This creates a light yellow wall and a brown wooden floor */
+  background: 
+    linear-gradient(to bottom, #fdfcf0 0%, #fdfcf0 70%, #8b5a2b 70%, #8b5a2b 100%);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Adding a simple cartoon window effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 150px;
+  height: 200px;
+  background: #aed9e0; /* Sky blue */
+  border: 8px solid #333; /* Dark frame */
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  z-index: -1;
+}
+
+/* Adding a horizontal line to separate wall and floor clearly */
+body::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 4px;
+  background: #5d3a1a;
+  z-index: -1;
+}
+
+#bag {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(images/bag.png) center no-repeat;
+    background-size: 100%;
+}
+
+#bag.burst {
+    background: url(images/bag-burst.png) center no-repeat;
+    background-size: 100%;
+}
+
+#bag-health{
+    width: 200px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin: 0 auto 20px auto;
+}
+
+#bag-health div{
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#bag-health div.low-health{
+    background-color: #f44336;
+}
+
+#controls{
+    width: 120px;
+    margin: 0 auto;
+
+}
